@@ -4,7 +4,11 @@
 # loaded once.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-require_relative "../fizzbuzz"
+
+# NOTE: If you uncomment the following line,
+# you won't encounter the `undefined method \`fizzbuzz'`
+# error described in the README
+# require_relative "../fizzbuzz"
 RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
   config.filter_run :focus
@@ -13,5 +17,5 @@ RSpec.configure do |config|
   # order dependency and want to debug it, you can fix the order by providing
   # the seed, which is printed after each run.
   #     --seed 1234
-  config.order = 'random'
+  config.order = 'default'
 end
